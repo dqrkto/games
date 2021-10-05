@@ -1,0 +1,286 @@
+var gamesJSON = [
+	{
+		"platform": "Steam",
+		"games": [
+			{
+				"name": "CS:GO",
+				"score": "8"
+			},
+			{
+				"name": "Evolvation",
+				"score": "nop"
+			},
+			{
+				"name": "Far Cry 4",
+				"score": "nop"
+			},
+			{
+				"name": "For Honor",
+				"score": "nop"
+			},
+			{
+				"name": "Hand Simulator",
+				"score": "6"
+			},
+			{
+				"name": "Left 4 Dead 2",
+				"score": "7"
+			},
+			{
+				"name": "Life is Strange",
+				"score": "nop"
+			},
+			{
+				"name": "Little Nightmares",
+				"score": "9"
+			},
+			{
+				"name": "Metro 2033",
+				"score": "nop"
+			},
+			{
+				"name": "Middle Earth: Shadow of Mordor",
+				"score": "nop"
+			},
+			{
+				"name": "Outlast",
+				"score": "9"
+			},
+			{
+				"name": "Outlast 2",
+				"score": "9"
+			},
+			{
+				"name": "Portal",
+				"score": "8"
+			},
+			{
+				"name": "Portal 2",
+				"score": "10"
+			},
+			{
+				"name": "Portal Reloaded",
+				"score": "7"
+			},
+			{
+				"name": "Portal Stories: Mel",
+				"score": "nop"
+			},
+			{
+				"name": "Resident Evil 4",
+				"score": "9"
+			},
+			{
+				"name": "Rocket League",
+				"score": "7"
+			},
+			{
+				"name": "The Witcher 3",
+				"score": "9"
+			},
+			{
+				"name": "Zombie Panic! Source",
+				"score": "nop"
+			}
+		]
+	},
+	{
+		"platform": "Ubisoft Connect",
+		"games": [
+			{
+				"name": "Assassins Creed IV Black Flag",
+				"score": "nop"
+			},
+			{
+				"name": "Assassins Creed Unity",
+				"score": "nop"
+			},
+			{
+				"name": "Far Cry 3",
+				"score": "nop"
+			},
+			{
+				"name": "Far Cry 4",
+				"score": "nop"
+			},
+			{
+				"name": "For Honor",
+				"score": "nop"
+			},
+			{
+				"name": "Ghost Recon WildLands",
+				"score": "nop"
+			},
+			{
+				"name": "Watch_Dogs",
+				"score": "7"
+			},
+			{
+				"name": "Watch_Dogs 2",
+				"score": "8"
+			},
+			{
+				"name": "World in Conflict",
+				"score": "nop"
+			}
+		]
+	},
+	{
+		"platform": "Epic Games",
+		"games": [
+			{
+				"name": "Alien: Isolation",
+				"score": "nop"
+			},
+			{
+				"name": "Among Us",
+				"score": "6"
+			},
+			{
+				"name": "Batman Arkham Asylum",
+				"score": "nop"
+			},
+			{
+				"name": "Batman Arkham City",
+				"score": "nop"
+			},
+			{
+				"name": "Batman Arkham Knight",
+				"score": "nop"
+			},
+			{
+				"name": "Blair Witch",
+				"score": "nop"
+			},
+			{
+				"name": "Control",
+				"score": "nop"
+			},
+			{
+				"name": "Fortnite",
+				"score": "6"
+			},
+			{
+				"name": "Ghostbusters",
+				"score": "nop"
+			},
+			{
+				"name": "GTA V",
+				"score": "8"
+			},
+			{
+				"name": "HITMAN",
+				"score": "nop"
+			},
+			{
+				"name": "Inside",
+				"score": "nop"
+			},
+			{
+				"name": "Lego Batman 1",
+				"score": "nop"
+			},
+			{
+				"name": "Lego Batman 2",
+				"score": "nop"
+			},
+			{
+				"name": "Lego Batman 3",
+				"score": "nop"
+			},
+			{
+				"name": "Metro 2033 Redux",
+				"score": "nop"
+			},
+			{
+				"name": "Moonlighter",
+				"score": "nop"
+			},
+			{
+				"name": "NBA 2K21",
+				"score": "nop"
+			},
+			{
+				"name": "Overcooked! 2",
+				"score": "nop"
+			},
+			{
+				"name": "Rayman Legends",
+				"score": "nop"
+			},
+			{
+				"name": "Rocket League",
+				"score": "7"
+			},
+			{
+				"name": "Sonic Mania",
+				"score": "nop"
+			},
+			{
+				"name": "Star Wars Battlefront II",
+				"score": "nop"
+			},
+			{
+				"name": "Subnautica",
+				"score": "nop"
+			},
+			{
+				"name": "The Escapists",
+				"score": "nop"
+			},
+			{
+				"name": "The Long Dark",
+				"score": "nop"
+			},
+			{
+				"name": "This War of Mine",
+				"score": "nop"
+			}
+		]
+	},
+	{
+		"platform": "Origin",
+		"games": [
+			{
+				"name": "Dead Space",
+				"score": "8"
+			},
+			{
+				"name": "The Sims 4",
+				"score": "nop"
+			}
+		]
+
+	},
+	{
+		"platform": "Blizzard",
+		"games": []
+	},
+	{
+		"platform": "GOG",
+		"games": [
+			{
+				"name": "SOMA",
+				"score": "nop"
+			}
+		]
+	},
+	{
+		"platform": "Social Club",
+		"games": [
+			{
+				"name": "GTA V",
+				"score": "8"
+			}
+		]
+	},
+	{
+		"platform": "Wishes",
+		"games": [
+			{
+				"name": "Quantum Break",
+				"score": "nop"
+			}
+		]
+	}
+]
