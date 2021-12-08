@@ -28,7 +28,7 @@ var gamesJSON = [
 			},
 			{
 				"name": "Life is Strange",
-				"score": "nop"
+				"score": "9"
 			},
 			{
 				"name": "Little Nightmares",
