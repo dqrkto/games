@@ -235,6 +235,18 @@ var gamesJSON = [
 			{
 				"name": "This War of Mine",
 				"score": "nop"
+			},
+			{
+				"name": "Tomb Raider: GOTY",
+				"score": "nop"
+			},
+			{
+				"name": "Shadow of the Tomb Raider: Definitive",
+				"score": "nop"
+			},
+			{
+				"name": "Rise of the Tomb Raider: 20y",
+				"score": "nop"
 			}
 		]
 	},
