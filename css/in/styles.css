@@ -4,7 +4,7 @@
   }
 
 .background{
-    background: radial-gradient(circle, #00000043 0%, #000000ab 100%), url("../../assets/back.jpg");
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.7) 100%), url("../../assets/back.gif");
     background-color: rgb(33, 33, 33);
     background-size: cover;
     background-attachment: fixed;
@@ -13,7 +13,7 @@
 }
 
 .btn-dark-custom{
-    background-color: rgba(0, 0, 0, 0.4); /*black with 70% transparency*/
+    background-color: rgba(0, 0, 0, 0.6); /*black with 70% transparency*/
     border-color: #8a8a8a;
     color: #ffffff;
 }
