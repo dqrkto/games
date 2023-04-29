@@ -328,9 +328,25 @@ var gamesJSON = [
 		"platform": "GOG",
 		"games": [
 			{
+				"name": "The Evil Within 2",
+				"score": "nop"
+			},
+			{
+				"name": "Dishonored 2",
+				"score": "nop"
+			},
+			{
+				"name": "Worms Revolution Gold Edition",
+				"score": "nop"
+			},
+			{
+				"name": "Fallout: New Vegas Ultimate Edition",
+				"score": "nop"
+			},
+			{
 				"name": "SOMA",
 				"score": "nop"
-			}
+			},
 		]
 	},
 	{
