@@ -39,8 +39,12 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
-				"name": "Middle Earth: Shadow of Mordor",
+				"name": "Middle-earth: Shadow of Mordor",
 				"score": "8"
+			},
+			{
+				"name": "Middle-earth: Shadow of War",
+				"score": "nop"
 			},
 			{
 				"name": "Outlast",
@@ -81,6 +85,14 @@ var gamesJSON = [
 			{
 				"name": "Zombie Panic! Source",
 				"score": "nop"
+			},
+			{
+				"name": "The Witness",
+				"score": "nop"
+			},
+			{
+				"name": "For Honor",
+				"score": "nop"
 			}
 		]
 	},
@@ -93,6 +105,10 @@ var gamesJSON = [
 			},
 			{
 				"name": "Assassins Creed Unity",
+				"score": "nop"
+			},
+			{
+				"name": "Assassins Creed Origins",
 				"score": "nop"
 			},
 			{
@@ -118,10 +134,6 @@ var gamesJSON = [
 			{
 				"name": "Watch_Dogs 2",
 				"score": "8"
-			},
-			{
-				"name": "World in Conflict",
-				"score": "nop"
 			}
 		]
 	},
@@ -149,11 +161,39 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "BioShock Remastered",
+				"score": "nop"
+			},
+			{
+				"name": "BioShock 2 Remastered",
+				"score": "nop"
+			},
+			{
+				"name": "BioShock Infinite: Complete Edition",
+				"score": "nop"
+			},
+			{
 				"name": "Blair Witch",
 				"score": "nop"
 			},
 			{
+				"name": "Bloons TD 6",
+				"score": "nop"
+			},
+			{
 				"name": "Control",
+				"score": "nop"
+			},
+			{
+				"name": "Death Stranding",
+				"score": "nop"
+			},
+			{
+				"name": "Dishonored - Definitive Edition",
+				"score": "nop"
+			},
+			{
+				"name": "DOOM 64",
 				"score": "nop"
 			},
 			{
@@ -193,7 +233,15 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "Metro Last Light Redux",
+				"score": "nop"
+			},
+			{
 				"name": "Moonlighter",
+				"score": "nop"
+			},
+			{
+				"name": "Mortal Shell",
 				"score": "nop"
 			},
 			{
@@ -202,6 +250,10 @@ var gamesJSON = [
 			},
 			{
 				"name": "Overcooked! 2",
+				"score": "nop"
+			},
+			{
+				"name": "Quake",
 				"score": "nop"
 			},
 			{
@@ -247,11 +299,15 @@ var gamesJSON = [
 			{
 				"name": "Rise of the Tomb Raider: 20y",
 				"score": "nop"
+			},
+			{
+				"name": "Wolfenstein: The New Order",
+				"score": "nop"
 			}
 		]
 	},
 	{
-		"platform": "Origin",
+		"platform": "EA",
 		"games": [
 			{
 				"name": "Dead Space",
