@@ -3,7 +3,7 @@ var gamesJSON = [
 		"platform": "Steam",
 		"games": [
 			{
-				"name": "CS:GO",
+				"name": "Counter-Strike 2",
 				"score": "8"
 			},
 			{
@@ -71,7 +71,7 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
-				"name": "Resident Evil 4",
+				"name": "Resident Evil 4 (2005)",
 				"score": "9"
 			},
 			{
@@ -83,17 +83,13 @@ var gamesJSON = [
 				"score": "9"
 			},
 			{
-				"name": "Zombie Panic! Source",
-				"score": "nop"
-			},
-			{
 				"name": "The Witness",
 				"score": "nop"
 			},
 			{
-				"name": "For Honor",
+				"name": "Zombie Panic! Source",
 				"score": "nop"
-			}
+			},
 		]
 	},
 	{
@@ -141,6 +137,10 @@ var gamesJSON = [
 		"platform": "Epic Games",
 		"games": [
 			{
+				"name": "A Plague Tale: Innocence",
+				"score": "nop"
+			},
+			{
 				"name": "Alien: Isolation",
 				"score": "nop"
 			},
@@ -185,6 +185,10 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "DEATHLOOP",
+				"score": "nop"
+			},
+			{
 				"name": "Death Stranding",
 				"score": "nop"
 			},
@@ -197,11 +201,19 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "Fallout 3: GOTY",
+				"score": "nop"
+			},
+			{
 				"name": "Fortnite",
 				"score": "6"
 			},
 			{
 				"name": "Ghostbusters",
+				"score": "nop"
+			},
+			{
+				"name": "Ghostwire: Tokyo",
 				"score": "nop"
 			},
 			{
@@ -229,6 +241,10 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "Marvel's Guardians of the Galaxy",
+				"score": "nop"
+			},
+			{
 				"name": "Metro 2033 Redux",
 				"score": "nop"
 			},
@@ -253,6 +269,10 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "PAYDAY 2",
+				"score": "nop"
+			},
+			{
 				"name": "Quake",
 				"score": "nop"
 			},
@@ -263,6 +283,10 @@ var gamesJSON = [
 			{
 				"name": "Rocket League",
 				"score": "7"
+			},
+			{
+				"name": "Saints Row",
+				"score": "nop"
 			},
 			{
 				"name": "Sonic Mania",
@@ -281,7 +305,15 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
+				"name": "The Evil Within 2",
+				"score": "nop"
+			},
+			{
 				"name": "The Long Dark",
+				"score": "nop"
+			},
+			{
+				"name": "The Outer Worlds: Spacer's Choice Edition",
 				"score": "nop"
 			},
 			{
@@ -318,11 +350,23 @@ var gamesJSON = [
 				"score": "nop"
 			}
 		]
-
 	},
 	{
-		"platform": "Blizzard",
-		"games": []
+		"platform": "Amazon",
+		"games": [
+			{
+				"name": "Star Wars: Knights of the Old Republic",
+				"score": "nop"
+			},
+			{
+				"name": "Star Wars: The Force Unleashed",
+				"score": "nop"
+			},
+			{
+				"name": "The Evil Within 2",
+				"score": "nop"
+			},
+		]
 	},
 	{
 		"platform": "GOG",
@@ -350,19 +394,87 @@ var gamesJSON = [
 		]
 	},
 	{
-		"platform": "Social Club",
+		"platform": "Uz#%5x@",
 		"games": [
 			{
 				"name": "GTA V",
 				"score": "8"
-			}
+			},
+			{
+				"name": "GTA Trilogy: SA",
+				"score": "10"
+			},
+			{
+				"name": "Outer Wilds",
+				"score": "10"
+			},
+			{
+				"name": "Valiant Hearts: The Great War",
+				"score": "8"
+			},
 		]
 	},
 	{
 		"platform": "Wishes",
 		"games": [
 			{
+				"name": "Dark Souls III",
+				"score": "nop"
+			},
+			{
+				"name": "GTA IV",
+				"score": "nop"
+			},
+			{
+				"name": "GTA Trilogy: III",
+				"score": "nop"
+			},
+			{
+				"name": "GTA Trilogy: VC",
+				"score": "nop"
+			},
+			{
+				"name": "Half-Life",
+				"score": "nop"
+			},
+			{
+				"name": "Half-Life 2",
+				"score": "nop"
+			},
+			{
+				"name": "Life Is Strange: Before the Storm",
+				"score": "nop"
+			},
+			{
+				"name": "Life Is Strange 2",
+				"score": "nop"
+			},
+			{
+				"name": "Life Is Strange: True Colors",
+				"score": "nop"
+			},
+			{
 				"name": "Quantum Break",
+				"score": "nop"
+			},
+			{
+				"name": "Red Dead Redemption",
+				"score": "nop"
+			},
+			{
+				"name": "Red Dead Redemption 2",
+				"score": "nop"
+			},
+			{
+				"name": "The Awesome Adventures of Captain Spirit",
+				"score": "nop"
+			},
+			{
+				"name": "TES V: Skyrim",
+				"score": "nop"
+			},
+			{
+				"name": "The Last of US",
 				"score": "nop"
 			}
 		]
