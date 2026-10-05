@@ -412,6 +412,42 @@ var gamesJSON = [
 				"name": "Valiant Hearts: The Great War",
 				"score": "8"
 			},
+			{
+				"name": "Silent Hill 2 Remake",
+				"score": "10"
+			},
+			{
+				"name": "Horizon: Zero Dawn",
+				"score": "9"
+			},
+			{
+				"name": "Horizon: Forbidden West",
+				"score": "8"
+			},
+			{
+				"name": "Resident Evil Requiem",
+				"score": "8"
+			},
+			{
+				"name": "GTA IV",
+				"score": "6"
+			},
+			{
+				"name": "Red Dead Redemption 2",
+				"score": "10"
+			},
+			{
+				"name": "The Last of US Part I",
+				"score": "9"
+			},
+			{
+				"name": "The Last of US Part II",
+				"score": "10"
+			},
+			{
+				"name": "Hogwarts Legacy",
+				"score": "8"
+			},
 		]
 	},
 	{
@@ -419,10 +455,6 @@ var gamesJSON = [
 		"games": [
 			{
 				"name": "Dark Souls III",
-				"score": "nop"
-			},
-			{
-				"name": "GTA IV",
 				"score": "nop"
 			},
 			{
@@ -456,13 +488,9 @@ var gamesJSON = [
 			{
 				"name": "Quantum Break",
 				"score": "nop"
-			},
+			}
 			{
 				"name": "Red Dead Redemption",
-				"score": "nop"
-			},
-			{
-				"name": "Red Dead Redemption 2",
 				"score": "nop"
 			},
 			{
@@ -474,9 +502,29 @@ var gamesJSON = [
 				"score": "nop"
 			},
 			{
-				"name": "The Last of US",
+				"name": "Resident Evil 4 Remake",
 				"score": "nop"
-			}
+			},
+			{
+				"name": "Marvel's Spider-Man Remastered",
+				"score": "nop"
+			},
+			{
+				"name": "Marvel's Spider-Man: Miles Morales",
+				"score": "nop"
+			},
+			{
+				"name": "Marvel's Spider-Man 2",
+				"score": "nop"
+			},
+			{
+				"name": "Death Stranding",
+				"score": "nop"
+			},
+			{
+				"name": "Cyberpunk 2077",
+				"score": "nop"
+			},
 		]
 	}
 ]
