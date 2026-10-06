@@ -1,79 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="My games in all platforms">
-		<meta name="author" content="Lucas do Prado Pinto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Minha coleção de jogos">
+    <title>Games</title>
 
-		<title>Games</title>
+    <link href="./assets/icon.png" rel="icon" type="image/x-icon">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-		<link href="./assets/icon.png" rel="icon" type="image/x-icon">
-		<link href="./css/out/bootstrap.min.css" rel="stylesheet">
-		<link href="./css/in/styles.css" rel="stylesheet">
-		<script src="./js/out/handlebars.min-v4.7.7.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
 
-	</head>
+    <div class="container py-4">
+        <!-- Topo e Filtros -->
+        <div class="glass-panel p-4 mb-4">
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-12 col-md-8">
+                    <input type="text" id="searchInput" class="form-control form-control-dark rounded-pill px-4" placeholder="Buscar por nome de jogo..." oninput="applyFilters()">
+                </div>
+                <div class="col-12 col-md-4 text-md-end">
+                    <button class="btn btn-outline-light rounded-pill btn-sm" data-bs-toggle="modal" data-bs-target="#modalAddGame">
+                        + Adicionar Jogo
+                    </button>
+                </div>
+            </div>
 
-	<body class="background vh-100">
-		<div class="container-fluid h-100">
-            <div class="row text-center mx-0" id="boxAll">
-                <div class="row justify-content-center text-center mx-0 text-white border border-light box-custom">
-                    <div class="col-12 col-sm-5">
-                        <input class="form-control text-center input-custom" type="text" placeholder="Search for a game" onkeyup="searchGame(this.value)">
+            <!-- Seletores de Filtro -->
+            <div class="row g-2">
+                <div class="col-6 col-md-4">
+                    <select id="filterPlatform" class="form-select form-select-sm form-select-dark rounded-pill" onchange="applyFilters()">
+                        <option value="all">Todas as Plataformas</option>
+                    </select>
+                </div>
+                <div class="col-6 col-md-4">
+                    <select id="filterStatus" class="form-select form-select-sm form-select-dark rounded-pill" onchange="applyFilters()">
+                        <option value="all">Todos os Status</option>
+                        <option value="completed">Zerados</option>
+                        <option value="playing">Jogando</option>
+                        <option value="not_played">Não Jogados</option>
+                        <option value="abandoned">Abandonados</option>
+                        <option value="wishlist">Lista de Desejos</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4">
+                    <select id="filterGenre" class="form-select form-select-sm form-select-dark rounded-pill" onchange="applyFilters()">
+                        <option value="all">Todos os Gêneros</option>
+                    </select>
+                </div>
+            </div>
+        </div>
 
-                        <div class="position-relative">
-                            <ul id="ulSearch" class="overflow-auto position-absolute"></ul>
+        <!-- Estatísticas Rápidas -->
+        <div class="d-flex justify-content-between align-items-center mb-3 px-2 text-white-50 small">
+            <span id="counterInfo">Exibindo 0 jogos</span>
+        </div>
+
+        <!-- Grid de Jogos -->
+        <div class="row g-3" id="gamesGrid"></div>
+    </div>
+
+    <!-- Modal: Adicionar Jogo (Gerador de JSON) -->
+    <div class="modal fade" id="modalAddGame" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-panel text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Novo Jogo para o JSON</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAddGame">
+                        <div class="mb-2">
+                            <label class="form-label small">Plataforma</label>
+                            <input type="text" id="addPlatform" class="form-control form-control-dark" placeholder="ex: Steam, Epic Games" required>
                         </div>
-
-                    </div>
-
-                    <div class="w-100"></div>
-
-                    {{#each gamesJSON}}
-                        <div class="col-sm-6 col-md-4 card-div">
-                            <a role="button" target="_blank" class="btn btn-dark-custom w-100 card-custom" data-bs-toggle="modal" data-bs-target="#Games{{@key}}">
-                                {{this.platform}}
-                            </a>
+                        <div class="mb-2">
+                            <label class="form-label small">Nome do Jogo</label>
+                            <input type="text" id="addName" class="form-control form-control-dark" required>
                         </div>
-                        <div class="modal fade" id="Games{{@key}}" tabindex="-1">
-                            <div class="modal-dialog modal-xl modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header justify-content-center border-0 py-2">
-                                        <h2 class="modal-title text-center">{{this.platform}}</h2>
-                                    </div>
-                                    <div class="modal-body pt-0 pb-2">
-                                        <div class="row justify-content-center">
-                                            {{#each this.games}}
-                                                <div class="col-6 col-sm-4 col-lg-3 card-div-modal">
-                                                    <a class="games-box btn btn-dark-custom w-100 card-custom-modal d-flex justify-content-center align-items-center" role="button">
-                                                        <div class="text-inside-modal text-score-{{this.score}}">{{this.name}}</div>
-                                                        <div class="games-box-caption">
-                                                            {{#if this.platform}}
-                                                                <div class="platform-head text-white-50">{{this.platform}}</div>
-                                                                <div class="platform-body">{{this.score}}</div>
-                                                            {{else}}
-                                                                <div class="platform-head text-white-50">Score</div>
-                                                                <div class="platform-body">{{this.score}}</div>
-                                                            {{/if}}
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            {{/each}}
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <label class="form-label small">Nota (0-10 ou Vazio)</label>
+                                <input type="number" id="addScore" class="form-control form-control-dark" min="0" max="10" placeholder="ex: 9">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small">Status</label>
+                                <select id="addStatus" class="form-select form-select-dark">
+                                    <option value="completed">Zerado</option>
+                                    <option value="playing">Jogando</option>
+                                    <option value="not_played">Não Jogado</option>
+                                    <option value="abandoned">Abandonado</option>
+                                    <option value="wishlist" selected>Wishlist</option>
+                                </select>
                             </div>
                         </div>
-                    {{/each}}
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <label class="form-label small">Gêneros (vírgula)</label>
+                                <input type="text" id="addGenres" class="form-control form-control-dark" placeholder="ex: RPG, Action">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small">Ano de Lançamento</label>
+                                <input type="number" id="addYear" class="form-control form-control-dark" placeholder="ex: 2023">
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <div class="col-6">
+                                <label class="form-label small">Main Story (Hours)</label>
+                                <input type="number" id="addTimeMain" class="form-control form-control-dark" placeholder="ex: 8.5">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small">Main + Extra (Hours)</label>
+                                <input type="number" id="addTimeMainExtra" class="form-control form-control-dark" placeholder="ex: 13.5">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 d-none" id="jsonOutputContainer">
+                            <label class="form-label text-info small">Copie o snippet e cole dentro do array no games.json:</label>
+                            <textarea id="jsonOutput" class="form-control bg-black text-warning font-monospace small" rows="8" readonly></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" onclick="generateJSON()">Gerar Objeto JSON</button>
+                    </form>
                 </div>
-			</div>
-		</div>
+            </div>
+        </div>
+    </div>
 
-		<script src="./js/out/bootstrap.bundle.min.js"></script>
+    <!-- Arquivo de Dados -->
+    <script src="./games.json"></script>
+    <script src="./script.js"></script>
 
-		<script src="./js/in/games.json"></script>
-	    <script src="./js/in/scripts.js"></script>	
-
-	</body>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

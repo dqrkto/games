@@ -1,0 +1,110 @@
+
+:root {
+    --bg-glass: rgba(18, 18, 22, 0.85);
+    --bg-card: rgba(30, 31, 38, 0.7);
+    --border-glass: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at center, rgba(15, 15, 20, 0.85) 0%, rgba(5, 5, 8, 0.95) 100%), url("./assets/back.gif");
+    background-color: #0c0d12;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #e6e6e6;
+    min-height: 100vh;
+}
+
+.glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+}
+
+.form-control-dark, .form-select-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-glass);
+    color: #fff;
+}
+
+.form-control-dark:focus, .form-select-dark:focus {
+    background-color: rgba(20, 20, 28, 0.9);
+    border-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Card do Jogo */
+.game-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 10px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Badges e Status */
+.score-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+    min-width: 32px;
+    text-align: center;
+}
+
+.score-high { background-color: rgba(25, 135, 84, 0.2); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.3); }
+.score-mid { background-color: rgba(255, 193, 7, 0.2); color: #f1c40f; border: 1px solid rgba(241, 196, 15, 0.3); }
+.score-low { background-color: rgba(220, 53, 69, 0.2); color: #e74c3c; border: 1px solid rgba(231, 76, 60, 0.3); }
+.score-nop { background-color: rgba(108, 117, 125, 0.2); color: #adb5bd; border: 1px solid rgba(173, 181, 189, 0.3); }
+
+.platform-badge {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-glass);
+    color: #d1d5db;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.status-playing { color: #38ef7d; }
+.status-completed { color: #3498db; }
+.status-not_played { color: #95a5a6; }
+.status-abandoned { color: #e74c3c; }
+.status-wishlist { color: #f39c12; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.4); }
+
+/* Badge de Duração dos Jogos */
+.time-badge {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3em 0.6em;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
